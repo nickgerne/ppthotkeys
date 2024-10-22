@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+  <ribbon>
+    <tabs>
+		<tab id='sample_tab' label='Temp'>
+			<group id='sample_group' label='Align objects [Ctrl] + [Alt]'>
+				<button imageMso='ObjectsAlignLeftSmart' id='align_left' onAction='AlignLeft' label='LA' screentip='Align Left' supertip='[Ctrl] + [Alt] + []'/>
+				<button imageMso='ObjectsAlignCenterHorizontalSmart' id='align_centert' onAction='AlignCenter' label='C' screentip='Align Center' supertip='[Ctrl] + [Alt] + [C]'/>
+				<button imageMso='ObjectsAlignRightSmart' id='align_right' onAction='AlignRight' label='RA' screentip='Align Right' supertip='[Ctrl] + [Alt] + []'/>
+				<button imageMso='ObjectsAlignTopSmart' id='align_top' onAction='AlignTop' label='TA' screentip='Align Top' supertip='[Ctrl] + [Alt] + []'/>
+				<button imageMso='ObjectsAlignMiddleVerticalSmart' id='align_middle' onAction='AlignMiddle' label='-' screentip='Align Middle' supertip='[Ctrl] + [Alt] + [Minus]'/>
+				<button imageMso='ObjectsAlignBottomtSmart' id='align_bottom' onAction='AlignBottom' label='DA' screentip='Align Bottom' supertip='[Ctrl] + [Alt] + []'/>
+			</group>
+
+			<group>
+				<group id='dist_group' label='Dist Objects [Shift] + [Alt]'>
+					<button imageMso='ObjectsDistributeVertically' id='distributeVertically' onAction='DistributeVertically' label='V' screentip='dist. vertically' supertip='[Shift] + [Alt] + [V]'/>
+					<button imageMso='ObjectsDistributeHorizontally' id='distributeHorizontally' onAction='DistributeHorizontally' label='H' screentip='dist. horizontally' supertip='[Shift] + [Alt] + [H]'/>
+				</group>
+			</group>
+
+			<group id='groupby_group' label='Group By [Shift] + [Alt]'>
+				<button imageMso='ContentTypeAddSiteColumn' id='groupByColumns' onAction='GroupByColumns' label='Group by Cols: Shift+Alt+C' screentip='group by cols' supertip='[Shift] + [Alt] + [C]'/>
+				<button imageMso='InsertRows' id='groupByRows' onAction='GroupByRows' label='Group by rows: Shift+Alt+R' screentip='group by rows' supertip='[Shift] + [Alt] + [R]'/>
+			</group>
+
+
+			<group id='insert_group' label='Add Objects [Ctrl] + [Shift]'>
+				<button imageMso='TextBoxInsert' id='insert_textbox' onAction='InsertTextbox' label='T' screentip='insert textbox' supertip='[Ctrl] + [Shirt] + [T]'/>
+				<button imageMso='ShapeRectangle' id='insert_rectangle' onAction='InsertRectangle' label='R' screentip='insert rectangle' supertip='[Ctrl] + [Shirt] + [R]'/>
+				<button imageMso='ShapeStraightConnectorArrow' id='insert_arrow' onAction='InsertArrow' label='A' screentip='insert arrow' supertip='[Ctrl] + [Shirt] + [A]'/>
+				<button imageMso='ShapeStriaghtConnector' id='insert_line' onAction='InsertLine' label='L' screentip='insert line' supertip='[Ctrl] + [Shirt] + [L]'/>
+				<button imageMso='AssignmentNotes' id='insert_stickynote' onAction='InsertStickyNote' label='0' screentip='insert stickynote' supertip='[Ctrl] + [0]'/>
+			</group>
+
+			<group id='modify_group' label='Modify Objects [Ctrl]'>
+				<button imageMso='PictureSwapMenu' id='modify_swapObjects' onAction='SwapObjects' label='Swap: Ctrl+Shift+|' screentip='swap objects' supertip='[Ctrl] + [Shirt] + [Pipe]'/>
+				<button imageMso='ShapeWidth' id='modify_makeObjectSameWidth' onAction='MakeObjectSameWidth' label='Same W: Ctrl+Alt+[' screentip='same width' supertip='[Ctrl] + [Shirt] + [OpenBracket]'/>
+				<button imageMso='ShapeHeight' id='modify_makeObjectSameHeight' onAction='MakeObjectSameHeight' label='Same H: Ctrl+Alt+]' screentip='same height' supertip='[Ctrl] + [Shirt] + [CloseBracket]'/>
+				<button imageMso='OrgChartFitToPage' id='modify_makeObjectSameSize' onAction='MakeObjectSameWidthAndHeight' label='Same Size: Ctrl+Alt+|' screentip='same size' supertip='[Ctrl] + [Shirt] + [Pipe]'/>
+				<button imageMso='AutoSizePage' id='modify_autosizeShapeToFitText' onAction='AutosizeShapeToFitText' label='[Ctrl] + 8' screentip='autofit text' supertip='[Ctrl] + [8]'/>
+				<button imageMso='PageScaleToFitScale' id='modify_changeAutosizeProperty' onAction='ChangeAutozieProperty' label='[Ctrl] + 7' screentip='change autosize property' supertip='[Ctrl] + [7]'/>
+			</group>
+
+			<group id='export_group' label='email'>
+				<button imageMso='MailMergeMergeToEmail' id='emailSelectedPages' onAction='EmailSelectedPages' label='Email: [Ctrl] + 1' screentip='email selected pages' supertip='[Ctrl] + [1]'/>
+			</group>
+		</tab>
+    </tabs>
+  </ribbon>
+</customUI>
+

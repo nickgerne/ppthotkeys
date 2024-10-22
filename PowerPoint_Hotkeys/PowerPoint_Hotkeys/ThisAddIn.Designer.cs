@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 #pragma warning disable 414
-namespace PowerPoint_Hotkeys {
+namespace PPTShortcuts {
     
     
     /// 
