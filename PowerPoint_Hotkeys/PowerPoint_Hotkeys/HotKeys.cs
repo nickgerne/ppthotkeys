@@ -36,7 +36,7 @@ using PowerPoint_Hotkeys;
 
 namespace PPTShortcuts
 {
-    public partial class ThisAddIn 
+    public partial class HotKeys 
     {
 
 
@@ -171,7 +171,7 @@ namespace PPTShortcuts
 
         private Application _application;
         private Dictionary<Combination, Action> _comboAssignments;
-        private void ThisAddIn_Startup(object sender, System.EventArgs e)
+        private void HotKeys_Startup(object sender, System.EventArgs e)
         {
             _application = Application;
             _comboAssignments = new Dictionary<Combination, Action>();
@@ -186,7 +186,7 @@ namespace PPTShortcuts
             Hook.AppEvents().OnCombination(_comboAssignments);
         }
 
-        private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
+        private void HotKeys_Shutdown(object sender, System.EventArgs e)
         {
             Hook.AppEvents().Dispose();
         }
@@ -199,8 +199,8 @@ namespace PPTShortcuts
         /// </summary>
         private void InternalStartup()
         {
-            this.Startup += new System.EventHandler(ThisAddIn_Startup);
-            this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
+            this.Startup += new System.EventHandler(HotKeys_Startup);
+            this.Shutdown += new System.EventHandler(HotKeys_Shutdown);
         }
 
         #endregion

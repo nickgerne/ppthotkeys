@@ -1,5 +1,4 @@
 ﻿using Microsoft.Office.Core;
-using PPTShortcuts;
 using PPTShortcuts.Workers;
 using System;
 using System.IO;
@@ -48,7 +47,7 @@ namespace PPTShortcuts
             if (_alignObjects == null)
             {
                 {
-                    var applicaiton = Globals.ThisAddIn.Application;
+                    var applicaiton = Globals.HotKeys.Application;
                     _alignObjects = new AlignObjects(applicaiton);
                 }
             }
@@ -59,7 +58,7 @@ namespace PPTShortcuts
             if (_distributeObjects == null)
             {
                 {
-                    var applicaiton = Globals.ThisAddIn.Application;
+                    var applicaiton = Globals.HotKeys.Application;
                     _distributeObjects = new DistributeObjects(applicaiton);
                 }
             }
@@ -70,7 +69,7 @@ namespace PPTShortcuts
             if (_insertObjects == null)
             {
                 {
-                    var applicaiton = Globals.ThisAddIn.Application;
+                    var applicaiton = Globals.HotKeys.Application;
                     _insertObjects = new InsertObjects(applicaiton);
                 }
             }
@@ -81,7 +80,7 @@ namespace PPTShortcuts
             if (_modifyObjects == null)
             {
                 {
-                    var applicaiton = Globals.ThisAddIn.Application;
+                    var applicaiton = Globals.HotKeys.Application;
                     _modifyObjects = new ModifyObjects(applicaiton);
                 }
             }
@@ -92,7 +91,7 @@ namespace PPTShortcuts
             if (_groupObjects == null)
             {
                 {
-                    var applicaiton = Globals.ThisAddIn.Application;
+                    var applicaiton = Globals.HotKeys.Application;
                     _groupObjects = new GroupObjects(applicaiton);
                 }
             }
@@ -103,7 +102,7 @@ namespace PPTShortcuts
             if (_exportPages == null)
             {
                 {
-                    var applicaiton = Globals.ThisAddIn.Application;
+                    var applicaiton = Globals.HotKeys.Application;
                     _exportPages = new ExportPages(applicaiton);
                 }
             }

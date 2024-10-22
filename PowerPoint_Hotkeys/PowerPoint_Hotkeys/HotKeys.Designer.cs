@@ -15,7 +15,7 @@ namespace PPTShortcuts {
     /// 
     [Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute(0)]
     [global::System.Security.Permissions.PermissionSetAttribute(global::System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
-    public sealed partial class ThisAddIn : Microsoft.Office.Tools.AddInBase {
+    public sealed partial class HotKeys : Microsoft.Office.Tools.AddInBase {
         
         internal Microsoft.Office.Tools.CustomTaskPaneCollection CustomTaskPanes;
         
@@ -28,8 +28,8 @@ namespace PPTShortcuts {
         /// 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public ThisAddIn(global::Microsoft.Office.Tools.Factory factory, global::System.IServiceProvider serviceProvider) : 
-                base(factory, serviceProvider, "AddIn", "ThisAddIn") {
+        public HotKeys(global::Microsoft.Office.Tools.Factory factory, global::System.IServiceProvider serviceProvider) : 
+                base(factory, serviceProvider, "AddIn", "HotKeys") {
             Globals.Factory = factory;
         }
         
@@ -40,7 +40,7 @@ namespace PPTShortcuts {
         protected override void Initialize() {
             base.Initialize();
             this.Application = this.GetHostItem<Microsoft.Office.Interop.PowerPoint.Application>(typeof(Microsoft.Office.Interop.PowerPoint.Application), "Application");
-            Globals.ThisAddIn = this;
+            Globals.HotKeys = this;
             global::System.Windows.Forms.Application.EnableVisualStyles();
             this.InitializeCachedData();
             this.InitializeControls();
@@ -174,19 +174,19 @@ namespace PPTShortcuts {
         private Globals() {
         }
         
-        private static ThisAddIn _ThisAddIn;
+        private static HotKeys _HotKeys;
         
         private static global::Microsoft.Office.Tools.Factory _factory;
         
         private static ThisRibbonCollection _ThisRibbonCollection;
         
-        internal static ThisAddIn ThisAddIn {
+        internal static HotKeys HotKeys {
             get {
-                return _ThisAddIn;
+                return _HotKeys;
             }
             set {
-                if ((_ThisAddIn == null)) {
-                    _ThisAddIn = value;
+                if ((_HotKeys == null)) {
+                    _HotKeys = value;
                 }
                 else {
                     throw new System.NotSupportedException();
